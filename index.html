@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>文旅行业日报</title>
+    <meta
+      name="description"
+      content="新东方文旅行业日报，每日追踪政策、消费、景区、酒店、目的地营销、文旅科技与投融资动态。"
+    />
+    <meta property="og:title" content="文旅行业日报" />
+    <meta
+      property="og:description"
+      content="每日追踪文旅行业最新新闻、数据和趋势观察。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/hero-cultural-tourism.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <img class="hero-image" src="assets/hero-cultural-tourism.png" alt="" />
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <div class="hero-topline">
+            <img class="brand-logo" src="assets/xdf-cultural-tourism-logo-warm.png" alt="新东方文旅 XDF Cultural Tourism" />
+            <button class="share-button" id="share-button" type="button" aria-label="分享日报">
+              <span aria-hidden="true">↗</span>
+              分享
+            </button>
+          </div>
+          <div class="kicker">CULTURE & TOURISM INTELLIGENCE</div>
+          <h1 id="page-title">文旅行业日报</h1>
+          <p id="hero-summary">每日追踪政策、消费、景区、酒店、目的地营销、科技与投融资动态。</p>
+          <div class="hero-meta" aria-label="日报元信息">
+            <span id="report-date">--</span>
+            <span id="report-count">10 条重点新闻</span>
+            <span id="report-updated">每日更新</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-band">
+        <div class="layout">
+          <aside class="brief-panel" aria-labelledby="brief-title">
+            <div class="panel-head">
+              <span class="eyebrow">TODAY</span>
+              <h2 id="brief-title">今日摘要</h2>
+            </div>
+            <p id="brief-text"></p>
+
+            <div class="metrics" id="metrics"></div>
+
+            <div class="archive-block">
+              <label for="report-picker">历史日报</label>
+              <select id="report-picker"></select>
+            </div>
+          </aside>
+
+          <section class="news-column" aria-labelledby="news-title">
+            <div class="section-heading">
+              <div>
+                <span class="eyebrow">TOP 10</span>
+                <h2 id="news-title">重点新闻</h2>
+              </div>
+              <div class="source-note">按行业影响排序</div>
+            </div>
+            <div class="news-list" id="news-list"></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="trend-band" aria-labelledby="trend-title">
+        <div class="trend-inner">
+          <span class="eyebrow">SIGNAL</span>
+          <h2 id="trend-title">趋势观察</h2>
+          <p id="trend-text"></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="data/reports.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
