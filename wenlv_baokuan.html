@@ -516,6 +516,36 @@
         font-weight: 760;
       }
 
+      .xhs-stats {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      .xhs-stat {
+        min-height: 64px;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid rgba(214, 56, 82, 0.2);
+        background: linear-gradient(135deg, rgba(214, 56, 82, 0.1), rgba(243, 201, 128, 0.12));
+      }
+
+      .xhs-stat b {
+        display: block;
+        color: var(--red);
+        font-size: 22px;
+        line-height: 1.05;
+      }
+
+      .xhs-stat span {
+        display: block;
+        margin-top: 7px;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 780;
+      }
+
 
       .notes {
         margin-top: 42px;
@@ -621,7 +651,7 @@
             <div class="kicker">PUBLIC CONTENT BOARD</div>
             <h1 id="page-title">文旅行业热点内容汇总</h1>
             <p class="hero-copy">
-              汇总小红书、抖音、公众号三类公开可验证样本，保留链接、热度线索与爆点分析。小红书保留封面图；抖音和公众号采用无封面的内容情报列表，更适合快速比较标题、账号与选题逻辑。
+              汇总小红书、抖音、公众号三类公开可验证样本，保留链接、热度线索与爆点分析。三类平台统一采用无封面的内容洞察列表，小红书强化赞评数据，方便快速比较标题、账号与选题逻辑。
             </p>
             <div class="hero-actions">
               <a class="news-link" href="https://danielwho97.github.io/travel-daily/?v=91ec24d" target="_blank" rel="noreferrer">查看文旅行业新闻</a>
@@ -662,7 +692,7 @@
         <section class="notes" aria-labelledby="notes-title">
           <h2 id="notes-title">数据限制</h2>
           <ul>
-            <li>小红书：公开专题页能提取封面图、标题、账号、点赞/评论和 noteId；部分笔记打开可能需要 App 或登录。</li>
+            <li>小红书：公开专题页能提取标题、账号、点赞/评论和 noteId；本版不展示封面，重点突出赞评数据。</li>
             <li>抖音：公开精选页可核验标题、账号、发布时间和作品链接；稳定封面图 URL 未公开暴露，本版暂不展示封面。</li>
             <li>公众号：原文链接可打开性受微信环境影响，故同时附转载页用于核验标题、正文摘要；本版暂不展示封面。</li>
           </ul>
@@ -674,7 +704,7 @@
       const content = [
         {
           platform: "小红书",
-          note: "公开专题页可提取封面图、热度和 noteId。",
+          note: "公开专题页可提取热度和 noteId；本版突出赞评数据，不展示封面。",
           items: [
             ["一份来自北京人不网红的北京攻略", "羊毛月", "17.1万赞 / 4225评", "https://sns-webpic.xhscdn.com/1000g0082e5og05mh00004buiegtu9cg4ok33pv8?imageView2/2/w/540/format/jpg", "https://www.xiaohongshu.com/explore/644f9cb70000000012033fc2", "", "反网红、本地人攻略、城市信任感"],
             ["接下来的北京，比你想象的还要美！", "潘小晨", "1.32万赞 / 801评", "https://sns-webpic.xhscdn.com/1040g00830ohs4mltie004a0g02nqs2jbnah4t8o?imageView2/2/w/540/format/jpg", "https://www.xiaohongshu.com/explore/64f3e6a600000000200031ee", "", "季节预告、出片场景、情绪化标题"],
@@ -756,6 +786,24 @@
         `;
       }
 
+      function parseXhsStats(value) {
+        const parts = String(value).split("/").map((part) => part.trim());
+        return {
+          likes: parts[0] || "--",
+          comments: parts[1] || "--"
+        };
+      }
+
+      function renderXhsStats(value) {
+        const stats = parseXhsStats(value);
+        return `
+          <div class="xhs-stats" aria-label="小红书赞评数据">
+            <div class="xhs-stat"><b>${escapeHtml(stats.likes)}</b><span>点赞</span></div>
+            <div class="xhs-stat"><b>${escapeHtml(stats.comments)}</b><span>评论</span></div>
+          </div>
+        `;
+      }
+
       function renderLinks(item, platform) {
         const primaryLabel = platform === "公众号" ? "原文" : "打开作品";
         const secondary = item[5]
@@ -770,30 +818,18 @@
       }
 
       function renderCard(item, platform, index) {
-        if (platform !== "小红书") {
-          return `
-            <article class="text-card" data-search="${escapeHtml([platform, ...item].join(" "))}">
-              <span class="rank-inline">${String(index + 1).padStart(2, "0")}</span>
-              <div>
-                <div class="source-row">
-                  <span class="source-pill">${escapeHtml(platform)}</span>
-                  <span class="source-pill">${escapeHtml(item[1])}</span>
-                  <span class="source-pill">${escapeHtml(item[2])}</span>
-                </div>
-                <h3 class="title">${escapeHtml(item[0])}</h3>
-                <p class="hot">${escapeHtml(item[6])}</p>
-                ${renderLinks(item, platform)}
-              </div>
-            </article>
-          `;
-        }
-
+        const isXhs = platform === "小红书";
         return `
-          <article class="work-card" data-search="${escapeHtml([platform, ...item].join(" "))}">
-            ${renderCover(item, platform, index)}
-            <div class="card-body">
+          <article class="text-card" data-search="${escapeHtml([platform, ...item].join(" "))}">
+            <span class="rank-inline">${String(index + 1).padStart(2, "0")}</span>
+            <div>
+              <div class="source-row">
+                <span class="source-pill">${escapeHtml(platform)}</span>
+                <span class="source-pill">${escapeHtml(item[1])}</span>
+                ${isXhs ? "" : `<span class="source-pill">${escapeHtml(item[2])}</span>`}
+              </div>
               <h3 class="title">${escapeHtml(item[0])}</h3>
-              <div class="meta">${escapeHtml(item[1])}<br />${escapeHtml(item[2])}</div>
+              ${isXhs ? renderXhsStats(item[2]) : ""}
               <p class="hot">${escapeHtml(item[6])}</p>
               ${renderLinks(item, platform)}
             </div>
@@ -830,7 +866,7 @@
                   </div>
                   <p class="section-note">${escapeHtml(group.note)}</p>
                 </div>
-                <div class="cards ${group.platform === "小红书" ? "" : "text-layout"}">${cards.join("")}</div>
+                <div class="cards text-layout">${cards.join("")}</div>
               </section>
             `;
           })
