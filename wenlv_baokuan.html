@@ -651,7 +651,7 @@
             <div class="kicker">PUBLIC CONTENT BOARD</div>
             <h1 id="page-title">文旅行业热点内容汇总</h1>
             <p class="hero-copy">
-              汇总小红书、抖音、公众号三类公开可验证样本，保留链接、热度线索与爆点分析。三类平台统一采用无封面的内容洞察列表，小红书强化赞评数据，方便快速比较标题、账号与选题逻辑。
+              汇总小红书、抖音、公众号三类公开可验证样本，保留链接、热度线索与爆点分析。抖音与公众号采用无封面的内容洞察列表，小红书优先记录近期公开报告里的平台热度线索，并补充可打开的高赞笔记作参考。
             </p>
             <div class="hero-actions">
               <a class="news-link" href="https://danielwho97.github.io/travel-daily/?v=91ec24d" target="_blank" rel="noreferrer">查看文旅行业新闻</a>
@@ -664,7 +664,7 @@
             <div class="hero-metrics">
               <div class="metric"><b>3</b><small>平台分区</small></div>
               <div class="metric"><b>10</b><small>每个平台样本数</small></div>
-              <div class="metric"><b>2026</b><small>以五一前后为主</small></div>
+              <div class="metric"><b>5月</b><small>以五一后和旅游日预热为主</small></div>
               <div class="metric"><b>公开</b><small>可验证链接口径</small></div>
             </div>
           </aside>
@@ -692,7 +692,7 @@
         <section class="notes" aria-labelledby="notes-title">
           <h2 id="notes-title">数据限制</h2>
           <ul>
-            <li>小红书：公开专题页能提取标题、账号、点赞/评论和 noteId；本版不展示封面，重点突出赞评数据。</li>
+            <li>小红书：单篇笔记公开检索不稳定，本版以近期公开报告数据和可打开高赞笔记混合核验，重点保留热度线索。</li>
             <li>抖音：公开精选页可核验标题、账号、发布时间和作品链接；稳定封面图 URL 未公开暴露，本版暂不展示封面。</li>
             <li>公众号：原文链接可打开性受微信环境影响，故同时附转载页用于核验标题、正文摘要；本版暂不展示封面。</li>
           </ul>
@@ -704,50 +704,50 @@
       const content = [
         {
           platform: "小红书",
-          note: "公开专题页可提取热度和 noteId；本版突出赞评数据，不展示封面。",
+          note: "单篇外链检索不稳定；本版优先使用飞猪×小红书五一趋势报告等公开核验线索，并补充可打开高赞笔记。",
           items: [
+            ["五一出片党：影视取景地、小众风景地、课本同款风景地", "飞猪旅行×小红书趋势报告", "2026-05-05 / 69%用户基于兴趣选目的地", "", "https://www.traveldaily.cn/article/189879/", "https://finance.sina.com.cn/roll/2026-05-05/doc-inhwvumi4107171.shtml", "把目的地包装成“可拍同款”，适合景区做机位地图、拍照动线和短标题模板"],
+            ["五一吃货：为美食而行，南昌等城市因美食热度大增", "飞猪旅行×小红书趋势报告", "2026-05-05 / 体验型商品增速跑赢大盘", "", "https://finance.sina.com.cn/tech/roll/2026-05-05/doc-inhwvytf9767747.shtml", "https://www.cntour.cn/h-nd-4068.html", "美食成为目的地决策入口，适合用街区清单、排队攻略和本地菜单制造收藏"],
+            ["五一运动控：特种兵极限游、Sportcation、周末户外走向大众", "飞猪旅行×小红书趋势报告", "2026-05-05 / 运动度假热度上升", "", "https://www.traveldaily.cn/article/189879/", "https://www.ce.cn/cysc/newmain/yc/jsxw/202605/t20260506_2947381.shtml", "“高精力人群”需要路线强度、装备建议和补给点，内容可直接转化成产品包"],
+            ["五一慢游族：文化小城和小众目的地热度抬升", "飞猪旅行×小红书趋势报告", "2026-05-05 / 新疆昭苏等小众地热度飙升超160%", "", "https://www.cntour.cn/h-nd-4068.html", "https://news.china.com.cn/2026-05/06/content_118478945.html", "慢游内容重点不是景点堆叠，而是住几晚、怎么逛、如何避开人群"],
+            ["五一随性派：P人旅行与AI问答辅助“说走就走”", "飞猪旅行×小红书趋势报告", "2026-05-05 / AI咨询量较清明增长56%", "", "https://www.guandian.cn/article/20260506/559141.html", "https://finance.sina.com.cn/tob/2026-05-06/doc-inhwycsa8251456.shtml?froms=ggmp", "轻攻略、临时改签、即时预订成为内容卖点，适合做“今晚出发”型产品"],
+            ["旅游攻略搜索：57%的攻略获取来源于搜索", "飞猪旅行×小红书趋势报告", "2026-05-05 / 搜索到下单周期缩短", "", "https://finance.sina.com.cn/roll/2026-05-05/doc-inhwvumi4107171.shtml", "https://www.stcn.com/article/detail/3894255.html", "标题必须覆盖目的地+人群+场景关键词，笔记承担搜索承接和交易前解释"],
             ["一份来自北京人不网红的北京攻略", "羊毛月", "17.1万赞 / 4225评", "https://sns-webpic.xhscdn.com/1000g0082e5og05mh00004buiegtu9cg4ok33pv8?imageView2/2/w/540/format/jpg", "https://www.xiaohongshu.com/explore/644f9cb70000000012033fc2", "", "反网红、本地人攻略、城市信任感"],
-            ["接下来的北京，比你想象的还要美！", "潘小晨", "1.32万赞 / 801评", "https://sns-webpic.xhscdn.com/1040g00830ohs4mltie004a0g02nqs2jbnah4t8o?imageView2/2/w/540/format/jpg", "https://www.xiaohongshu.com/explore/64f3e6a600000000200031ee", "", "季节预告、出片场景、情绪化标题"],
             ["这大概是北京最chill的一条Citywalk…", "撒欢儿北京", "6889赞 / 165评", "https://sns-webpic.xhscdn.com/1000g0082n1br3n8ji0005n9lc4ilmfvtu1ujr20?imageView2/2/w/540/format/jpg", "https://www.xiaohongshu.com/explore/6498370d000000002701184f", "", "Citywalk、松弛感、路线型收藏"],
             ["北京citywalk，这3km也太有文化底蕴了吧", "yoyo宥宥来啦", "6416赞 / 323评", "https://sns-webpic.xhscdn.com/1040g00830om7vsk03g00400r2sha5gra81akkkg?imageView2/2/w/540/format/jpg", "https://www.xiaohongshu.com/explore/64f8604a000000001f03ca4d", "", "短距离路线、文化底蕴、低门槛"],
-            ["真的建议大家去这个博物馆看一看", "姜千渝", "3247赞 / 126评", "https://sns-webpic.xhscdn.com/1000g0082po8lc0qk80005nic366082h7kaof338?imageView2/2/w/540/format/jpg", "https://www.xiaohongshu.com/explore/64ae762d000000001002836a", "", "博物馆种草、强建议句式"],
-            ["来我家乡玩一天｜北京可不止故宫长城和鼓楼", "小墨与阿猴", "2865赞 / 113评", "https://sns-webpic.xhscdn.com/1040g00830osi64ea3m704001n791b8gtkhd0388?imageView2/2/w/540/format/jpg", "https://www.xiaohongshu.com/explore/64ed90b2000000001e03e938", "", "去刻板印象、本地人视角"],
-            ["镜头里的秋日私语：北京秋天绝美citywalk", "小菠萝其乐无穷", "1772赞 / 94评", "https://sns-webpic.xhscdn.com/1040g00830oi9jjr3i6004231crrrmj6qaik0460?imageView2/2/w/540/format/jpg", "https://www.xiaohongshu.com/explore/64f454f6000000001e00cfbf", "", "季节+影像感+路线"],
-            ["来我家乡玩一天｜亲子潘家园盘串儿逛市集", "王桃子", "1524赞 / 25评", "https://sns-webpic.xhscdn.com/1040g00830opi5pujj4704a5817gsifv4miuu5eg?imageView2/2/w/540/format/jpg", "https://www.xiaohongshu.com/explore/64fbc624000000001d01530d", "", "亲子、市集、非标体验"],
-            ["错过可能又要等几年！抬头仰望600年前的星空", "陈小wing", "1085赞 / 27评", "https://sns-webpic.xhscdn.com/1040g00830n2b0nj6lm004a0euah6jrtnatb44gg?imageView2/2/w/540/format/jpg", "https://www.xiaohongshu.com/explore/64c339b0000000000c036f3a", "", "稀缺性、历史想象、强钩子"],
-            ["来我家乡玩一天，听听我给你介绍北京美食", "陈佩斯", "1767赞 / 166评", "https://sns-webpic.xhscdn.com/1040g00830p1ljgg4k4005p0fu6al1p867sqeo60?imageView2/2/w/540/format/jpg", "https://www.xiaohongshu.com/explore/65041361000000001d015f33", "", "名人背书、本地美食、家乡叙事"]
+            ["真的建议大家去这个博物馆看一看", "姜千渝", "3247赞 / 126评", "https://sns-webpic.xhscdn.com/1000g0082po8lc0qk80005nic366082h7kaof338?imageView2/2/w/540/format/jpg", "https://www.xiaohongshu.com/explore/64ae762d000000001002836a", "", "博物馆种草、强建议句式"]
           ]
         },
         {
           platform: "抖音",
           note: "公开精选页可核验标题、账号、发布时间和作品链接；本版不展示封面，突出标题钩子与选题逻辑。",
           items: [
-            ["五一慢漫游：五一来象山打卡被央视翻牌的滩涂赶海", "文旅象山", "2026-04-30", "", "https://jingxuan.douyin.com/m/video/7634448736160091432", "", "央视背书、赶海体验、海岸度假"],
-            ["“五一”假期来马山，演出、攀岩、夜市样样精彩", "南宁文旅", "2026-05-01", "", "https://jingxuan.douyin.com/m/video/7634853566703832356", "", "多活动合集、县域玩法"],
-            ["五一狂欢日 津城任逍遥：天津假日文旅活动发布", "天津文旅", "2026-04-28", "", "https://jingxuan.douyin.com/m/video/7633641544247020835", "", "活动总览、城市官方号"],
-            ["五一奔赴天水 开启田园慢生活", "视听甘肃", "2026-04-30", "", "https://jingxuan.douyin.com/m/video/7634352614750096683", "", "田园市集、慢生活、农文旅融合"],
-            ["南市食品街才是天津美食主场", "静时间", "2026-04-24", "", "https://jingxuan.douyin.com/m/video/7631950168568368410", "", "城市更新、美食街、观点型内容"],
-            ["广西民族博物馆“五一”非遗民族展览及活动", "南宁文旅", "2026-05-01", "", "https://jingxuan.douyin.com/m/video/7634854450896588068", "", "非遗展演、博物馆热"],
-            ["五大道公园荣获“津游嗨购”热门场景，五一推出新活动", "津云", "2026-04-23", "", "https://jingxuan.douyin.com/m/video/7631925611207888169", "", "城市消费嘉年华、热门街区"],
-            ["敦煌文旅的核心，是把千年文化活成当代流量", "敦煌市文体广电和旅游局", "2026-04-21", "", "https://jingxuan.douyin.com/m/video/7631126369079209977", "", "强观点、文化转译、官方人设"],
-            ["运河边的五一盛宴，通州给了我们太多惊喜", "地产酵母说京房-安居好房", "2026-04-24", "", "https://jingxuan.douyin.com/m/video/7632332951048719168", "", "北京副中心、亲子活动、城市生活"],
-            ["择一处山水，静享慢节奏，旅居到贵州", "贵州文旅", "2026-04-21", "", "https://jingxuan.douyin.com/m/video/7631204493212428200", "", "旅居、山水康养、情绪价值"]
+            ["“五一”假期北京接待游客1882.7万人次，文旅消费再创新高", "北京发布", "2026-05-06", "", "https://jingxuan.douyin.com/m/video/7636616642478361892", "", "官方战报视频化，用核心数据证明城市热度，适合节后复盘传播"],
+            ["2026五一出游报告出炉 文旅综合实力持续出圈", "陕西都市快报", "2026-05-05", "", "https://jingxuan.douyin.com/m/video/7636295911420725641", "", "用报告口径包装区域热度，短时长新闻切片便于扩散"],
+            ["山水为底，烟火作韵！黔江交出全域文旅高分答卷", "华龙网", "2026-05-08", "", "https://jingxuan.douyin.com/m/video/7637466030385679651", "", "“山水+烟火+成绩单”三段式，兼顾情绪和可量化成果"],
+            ["哈尔滨文旅消费券来啦！领券用券超简单，千万别错过", "抖音生活服务", "2026-05-01", "", "https://jingxuan.douyin.com/m/video/7634870458684852863", "", "消费券内容强调领取路径，强实用信息比口号更易转化"],
+            ["八达岭“五一”首日客流平稳有序", "青流视频", "2026-05-01", "", "https://jingxuan.douyin.com/m/video/7634839108384312639", "", "热门景区大客流下突出秩序、安全和服务保障，缓解游客顾虑"],
+            ["五一水上出行旅客量同比增长6.8%，水上旅游加速升级", "央视一套", "2026-05-05", "", "https://jingxuan.douyin.com/m/video/7636386075048430911", "", "把水上观光升级为船票+演艺+非遗体验，提供产品组合范式"],
+            ["广西民族博物馆“五一”非遗民族展览及活动", "南宁文旅", "2026-05-01", "", "https://jingxuan.douyin.com/m/video/7634854450896588068", "", "博物馆假日内容不只看展，用非遗展演提升亲子和年轻客群停留"],
+            ["“五一”假期来马山，演出、攀岩、夜市样样精彩", "南宁文旅", "2026-05-01", "", "https://jingxuan.douyin.com/m/video/7634853566703832356", "", "县域目的地用活动合集降低决策成本，适合做一日多场景路线"],
+            ["2026年五一黄金周，欢迎走进田园都市、文化名城漳州", "海博TV·福建发布", "2026-05-01", "", "https://jingxuan.douyin.com/m/video/7634859041210092846", "", "省级媒体把城市定位、促消费和山海烟火打包，适合区域形象传播"],
+            ["“五一”文旅氛围浓 大祥区宝庆里花鼓戏表演烟火盛", "新湖南", "2026-05-03", "", "https://jingxuan.douyin.com/m/video/7635537519678115237", "", "地方戏曲进入街区夜间场景，兼具文化传承和市民休闲属性"]
           ]
         },
         {
           platform: "公众号",
           note: "原文链接可打开性受微信环境影响，同时附转载页核验；本版不展示封面，突出信息价值和转发理由。",
           items: [
-            ["我市文旅推出8条“烟火兰州”主题旅游线路", "兰州相关公众号", "2026-04", "", "https://mp.weixin.qq.com/s/8XO8qvYGgp_ZIcJDuT3ONA", "https://cn-zsw.com/sys-nd/8605.html", "线路攻略、烟火气、黄河游"],
-            ["兰州旅游热度创新高，就“巳”这么火！", "兰州相关公众号", "2026-05", "", "https://mp.weixin.qq.com/s/--Ztk9mS3hb730MfM8Arng", "https://www.cn-zsw.com/sys-nd/12733.html", "五一战报、客流数据、城市热度"],
-            ["成都五一文旅消费榜单发布，成都表现亮眼", "成都相关公众号", "2026-05", "", "https://mp.weixin.qq.com/s/csOjOpVCtVuHnlQGkn2u-Q", "https://news.chengdu.cn/2026/0506/69fa98ef8f007a160c63546c.shtml", "城市榜单、消费数据、深度文化游"],
-            ["这个五一 微信刷爆的都有啥？", "中国文艺网新媒体等", "2026-05", "", "https://mp.weixin.qq.com/s/HVG3oZNn0fL7Gwr0_r0yQw", "https://www.cn-zsw.com/sys-nd/12747.html", "五一总览、微信生态、爆点盘点"],
-            ["集中爆发，各地文旅都在发钱，根本领不完啊", "聪明旅行", "2026-04", "", "http://mp.weixin.qq.com/s?__biz=MzIyMDM0OTIzNg==&mid=2247518896&idx=1&sn=7d427ba57b7477f128cb193defac21ab&", "https://www.xinfinite.net/t/topic/19108", "消费券、薅羊毛、强实用收藏"],
-            ["海南官宣：补贴3000万，连续158天", "聪明旅行", "2026-04", "", "http://mp.weixin.qq.com/s?__biz=MzIyMDM0OTIzNg==&mid=2247518732&idx=1&sn=c573ef04f3c1c7759e84f5b33d924f7f&", "https://www.xinfinite.net/t/topic/19062", "大额补贴、目的地转化、持续周期"],
-            ["1000万消费券，每天可抢", "爱生活的燃烧", "2026-03", "", "http://mp.weixin.qq.com/s?__biz=MzIzMDY5NTU5Nw==&mid=2247693873&idx=1&sn=b89128689ba21c9a36eb0c894a061ee2&", "https://www.xinfinite.net/t/topic/18484", "成都住宿券、平台叠加优惠"],
-            ["全国多个景区近期可免费游玩！有你想去的吗？", "看点资讯等", "2026-04", "", "https://mp.weixin.qq.com/s/IpisU-w9ZBxXbzfP5W2QlA", "https://cj.sina.com.cn/articles/view/7879922979/1d5ae152301901qla8?froms=ggmp", "免票清单、转发价值高"],
-            ["“五一”假期预计发送旅客270万人次！兰州铁路局增加运能", "兰州相关公众号", "2026-05", "", "https://mp.weixin.qq.com/s/6TLABwd_AR1woo6l89TGHA", "https://www.cn-zsw.com/sys-nd/12692.html", "交通保障、热门方向、出行服务"],
-            ["《中国赏花游发展报告（2026）》发布", "中国绿色时报等", "2026-04", "", "https://mp.weixin.qq.com/s/1vbwekSZIr9UxbPmUrIl1A", "https://www.sxfjyl.org/sys-nd/9590.html", "行业报告、赏花游、趋势解读"]
+            ["5·19中国旅游日，山西一大波景区免票或半价！", "山西日报等景区/文旅局公众号", "2026-05", "", "https://mp.weixin.qq.com/s/fQxuMaO7vyB1zqRB2VZ0Ow", "https://china.huanqiu.com/article/4RXuUcZTzHc", "景区优惠清单天然适合收藏转发，标题直接给出利益点"],
+            ["兰州旅游热度创新高，就“巳”这么火！", "兰州相关公众号", "2026-05", "", "https://mp.weixin.qq.com/s/--Ztk9mS3hb730MfM8Arng", "https://www.cn-zsw.com/sys-nd/12733.html", "五一战报用景区客流和活动供给证明城市热度，适合政务号复盘"],
+            ["这个五一 微信刷爆的都有啥？", "中国文艺网新媒体等", "2026-05", "", "https://mp.weixin.qq.com/s/HVG3oZNn0fL7Gwr0_r0yQw", "https://www.cn-zsw.com/sys-nd/12747.html", "把全国数据、地方爆点和微信生态热词打包，适合作为节后传播盘点"],
+            ["成都五一文旅消费榜单发布，成都表现亮眼", "成都相关公众号", "2026-05", "", "https://mp.weixin.qq.com/s/csOjOpVCtVuHnlQGkn2u-Q", "https://news.chengdu.cn/2026/0506/69fa98ef8f007a160c63546c.shtml", "榜单内容能强化城市竞争心智，适合叠加消费数据和热门场景"],
+            ["集中爆发，各地文旅都在发钱，根本领不完啊", "聪明旅行", "2026-04-27", "", "http://mp.weixin.qq.com/s?__biz=MzIyMDM0OTIzNg==&mid=2247518896&idx=1&sn=7d427ba57b7477f128cb193defac21ab&", "https://www.xinfinite.net/t/topic/19108", "消费券攻略以抢券时间、平台和叠加规则驱动收藏转发"],
+            ["海南官宣：补贴3000万，连续158天", "聪明旅行", "2026-04-25", "", "http://mp.weixin.qq.com/s?__biz=MzIyMDM0OTIzNg==&mid=2247518732&idx=1&sn=c573ef04f3c1c7759e84f5b33d924f7f&", "https://www.xinfinite.net/t/topic/19062", "大额补贴+长周期覆盖五一和暑期，适合做目的地持续转化入口"],
+            ["我市文旅推出8条“烟火兰州”主题旅游线路", "兰州相关公众号", "2026-04", "", "https://mp.weixin.qq.com/s/8XO8qvYGgp_ZIcJDuT3ONA", "https://cn-zsw.com/sys-nd/8605.html", "线路攻略把烟火气、黄河游和城市漫游打包，实用性强"],
+            ["全民阅读周：跟着图书去旅行，成都联动五区文旅场景", "成都相关公众号", "2026-04", "", "https://mp.weixin.qq.com/s/lXD6VNWthzRnO7zORwAf3g", "https://news.chengdu.cn/2026/0420/69e5711bfd86943d35ce3c4c.shtml", "阅读、非遗、科技和城市空间融合，适合做低成本文化活动IP"],
+            ["全国多个景区近期可免费游玩！有你想去的吗？", "看点资讯等", "2026-04", "", "https://mp.weixin.qq.com/s/IpisU-w9ZBxXbzfP5W2QlA", "https://cj.sina.com.cn/articles/view/7879922979/1d5ae152301901qla8?froms=ggmp", "免票清单具有强转发理由，但需要在正文明确时间和适用人群"],
+            ["“五一”假期预计发送旅客270万人次！兰州铁路局增加运能", "兰州相关公众号", "2026-05", "", "https://mp.weixin.qq.com/s/6TLABwd_AR1woo6l89TGHA", "https://www.cn-zsw.com/sys-nd/12692.html", "交通运能信息服务出行决策，适合与目的地攻略和活动清单互链"]
           ]
         }
       ];
